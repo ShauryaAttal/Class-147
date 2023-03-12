@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+</head>
+
+<body>
+    <a-scene background="color: #000000">
+
+        <!--Camera-->
+        <a-entity position="0 0 15">
+            <a-camera></a-camera>
+        </a-entity>
+
+        <a-entity
+            sound="src: https://cdn.glitch.com/850dd813-e5e9-4dd0-9751-38981ae74172%2Ffh_space_discovery_-_earth_proud_music_preview(1).mp3?v=1604306441093; autoplay: true; volume: 0.5">
+        </a-entity>
+
+
+        <!--Sky-->
+        <a-sky src="https://cdn.glitch.com/850dd813-e5e9-4dd0-9751-38981ae74172%2Fvia_lactea.png?v=1604296331712">
+
+        </a-sky>
+
+        <!--Sun-->
+        <a-entity>
+            <a-sphere position="0 0 0" radius="2"
+                src="https://cdn.glitch.com/850dd813-e5e9-4dd0-9751-38981ae74172%2Fsol.jpg?v=1604296185621"></a-sphere>
+        </a-entity>
+
+        <!--Mercury-->
+        <a-entity position="0 0 0" rotation="0 0 0"
+            animation="property: rotation; to: 0 360 0;easing:linear; loop: true; dur: 22000">
+            <a-sphere position="1  0 -5" radius="0.2"
+                src="https://cdn.glitch.com/850dd813-e5e9-4dd0-9751-38981ae74172%2Fmercurio.jpg?v=1604298142259">
+            </a-sphere>
+        </a-entity>
+
+        <!--Venus-->
+        <a-entity position="0 0 0" rotation="0 0 0"
+            animation="property: rotation; to: 0 360 0;easing:linear; loop: true; dur: 56250">
+            <a-sphere position="7  0 -5" radius="0.5" color="orange"></a-sphere>  
+        </a-entity>
+
+        <!--Earth-->
+        <a-entity position="0 0 0" rotation="0 0 0"
+            animation="property: rotation; to: 0 360 0;easing:linear; loop: true; dur: 91250">
+            <a-sphere position="10  0 -5" radius="0.5" color="blue"></a-sphere>  
+        </a-entity>
+
+        <!--Mars-->
+        <a-entity position="0 0 0" rotation="0 0 0"
+            animation="property: rotation; to: 0 360 0;easing:linear; loop: true; dur: 171750">
+            <a-sphere position="15  0 -5" radius="0.3" color="red"></a-sphere>  
+        </a-entity>
+
+        
+
+        <!--Orbital Paths-->
+
+        <!--Mercury-->
+        <a-torus color="grey" rotation="90 0 0" radius="5" radius-tubular="0.01" segments-tubular="1000"></a-torus>
+        
+        <!---Venus-->
+        <a-torus color="grey" rotation="90 0 0" radius="8.5" radius-tubular="0.01" segments-tubular="1000"></a-torus>
+        
+
+        <!---Earth-->
+        <a-torus color="grey" rotation="90 0 0" radius="11" radius-tubular="0.01" segments-tubular="1000"></a-torus>
+        
+
+        <!---Mars-->
+        <a-torus color="grey" rotation="90 0 0" radius="15.8" radius-tubular="0.01" segments-tubular="1000"></a-torus>
+        
+
+    </a-scene>
+</body>
+
+</html>
